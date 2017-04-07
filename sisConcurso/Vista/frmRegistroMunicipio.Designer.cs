@@ -32,16 +32,15 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.picCamara = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.cmbDispositivo = new System.Windows.Forms.ComboBox();
             this.btnTomar = new System.Windows.Forms.Button();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCamara)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -79,14 +78,16 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(360, 26);
             this.txtNombre.TabIndex = 24;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
-            // pictureBox1
+            // picCamara
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 133);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 178);
-            this.pictureBox1.TabIndex = 25;
-            this.pictureBox1.TabStop = false;
+            this.picCamara.Location = new System.Drawing.Point(12, 133);
+            this.picCamara.Name = "picCamara";
+            this.picCamara.Size = new System.Drawing.Size(150, 178);
+            this.picCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picCamara.TabIndex = 25;
+            this.picCamara.TabStop = false;
             // 
             // label8
             // 
@@ -97,22 +98,15 @@
             this.label8.TabIndex = 30;
             this.label8.Text = "Seleccione Camra";
             // 
-            // cmbDispositivo
-            // 
-            this.cmbDispositivo.FormattingEnabled = true;
-            this.cmbDispositivo.Location = new System.Drawing.Point(12, 337);
-            this.cmbDispositivo.Name = "cmbDispositivo";
-            this.cmbDispositivo.Size = new System.Drawing.Size(150, 28);
-            this.cmbDispositivo.TabIndex = 29;
-            // 
             // btnTomar
             // 
-            this.btnTomar.Location = new System.Drawing.Point(22, 371);
+            this.btnTomar.Location = new System.Drawing.Point(22, 337);
             this.btnTomar.Name = "btnTomar";
             this.btnTomar.Size = new System.Drawing.Size(117, 30);
             this.btnTomar.TabIndex = 28;
-            this.btnTomar.Text = "Tomar Foto";
+            this.btnTomar.Text = "Examinar";
             this.btnTomar.UseVisualStyleBackColor = true;
+            this.btnTomar.Click += new System.EventHandler(this.btnTomar_Click);
             // 
             // txtDescripcion
             // 
@@ -159,11 +153,10 @@
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.cmbDispositivo);
             this.Controls.Add(this.btnTomar);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.picCamara);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
@@ -172,8 +165,9 @@
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frmRegistroMunicipio";
             this.Text = "Registro Municipio";
+            this.Load += new System.EventHandler(this.frmRegistroMunicipio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picCamara)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -185,9 +179,8 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picCamara;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ComboBox cmbDispositivo;
         private System.Windows.Forms.Button btnTomar;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label label7;
