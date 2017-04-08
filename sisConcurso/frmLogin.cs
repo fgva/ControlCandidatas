@@ -12,21 +12,23 @@ using sisConcurso.Manager.Helpers;
 
 namespace sisConcurso
 {
-    public partial class frmLogincs : Form
+    public partial class frmLogin : Form
     {
         UsuarioHelper uHelper;
-        public frmLogincs()
+        public frmLogin()
         {
             InitializeComponent();
         }
-
+        //Acediendo al Sistema, el cual se valida el Usuario con el email y el password encriptado
+        //en MD5
         private void btnIngresar_Click(object sender, EventArgs e)
         {
             uHelper = UsuarioManeger.Autentificar(txtUsuario.Text,
                txtPassword.Text);
+            
             if (uHelper.esValido)
             {
-                Form1.uHelper = uHelper;
+                Main.uHelper = uHelper;
                 this.Close();
 
             }
@@ -45,8 +47,7 @@ namespace sisConcurso
 
         private void txtPassword_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionesTXT va = new ValidacionesTXT();
-            va.SoloNumeros(e);
+
         }
     }
 }

@@ -46,16 +46,20 @@ namespace sisConcurso.Vista
         {
             VALIDAR = true;
             InitializeComponent();
+            dtpAño.Format = DateTimePickerFormat.Custom;
+            dtpAño.CustomFormat = "yyyy";
 
 
         }
         public frmRegistroCandidata(frmMainCandidata mcandidata)
         {
             InitializeComponent();
+            dtpAño.Format = DateTimePickerFormat.Custom;
+            dtpAño.CustomFormat = "yyyy";
             mCandidata = mcandidata;//modificar
             VALIDAR = false;
             VALIDARCandidata = true;
-
+            this.Text = "Actualizar Candidata";
             candidata nCandidata = CandidataManage.BuscarporID(frmMainCandidata.idCon);
             pk = nCandidata.pkCandidata;
             txtNombre.Text = nCandidata.cNombreCom;
@@ -99,11 +103,12 @@ namespace sisConcurso.Vista
                     nCandidata.cFDN = dtpFDN.Value.Date;
                     nCandidata.cRaking = Convert.ToInt32(rakin);
                     nCandidata.fkMunicipio = Convert.ToInt32(cmbMunicipio.SelectedValue);
-                    nCandidata.fkUsuario = idusuario;
+                    nCandidata.fkUsuario = Main.FKSESSION;
                     nCandidata.cFoto = ImagenString;
 
 
                     CandidataManage.Guarda(nCandidata);
+                    this.Close();
                     mCandidata.CargarCandidata();
                 }
                 else
@@ -112,16 +117,19 @@ namespace sisConcurso.Vista
                     {
                         nCandidata.cNombreCom = txtNombre.Text;
                         nCandidata.cCorre = txtCorreo.Text;
-                        nCandidata.cAnoComvoca = Convert.ToDateTime(dtpAño.Value.Date.Year);
+                        nCandidata.cAnoComvoca = dtpAño.Value;
                         nCandidata.cCurp = txtCurp.Text;
                         nCandidata.cDescripcion = txtDescripcion.Text;
                         nCandidata.cNivelStudio = txtEstudio.Text;
                         nCandidata.cFDN = dtpFDN.Value.Date;
                         nCandidata.fkMunicipio = Convert.ToInt32(cmbMunicipio.SelectedValue);
+                        nCandidata.fkUsuario = Main.FKSESSION;
                         nCandidata.cRaking = 1;
                         nCandidata.cFoto = ImagenString;
 
                         CandidataManage.Guarda(nCandidata);
+                        this.Close();
+                        //mCandidata.CargarCandidata();
 
                     }
                     else
@@ -129,14 +137,14 @@ namespace sisConcurso.Vista
                         MessageBox.Show("Ya existe la candidata", "Error");
                         txtNombre.Focus();
                     }
-                    this.Close();
                 }
             }
         }
 
         private void frmRegistroCandidata_Load(object sender, EventArgs e)
         {
-
+            dtpAño.Format = DateTimePickerFormat.Custom;
+            dtpAño.CustomFormat = "yyyy";
             this.CargarMunicipio();
             //para llenar el combo con todas las camaras conectadas a la computadora
 
@@ -213,6 +221,7 @@ namespace sisConcurso.Vista
                     "Favor Sellecione Un Correo Valido", "Validacion De Correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtCorreo.SelectAll();
                 txtCorreo.Focus();
+                txtCorreo.Text = "ejemplo@ejemplo.com";
             }
         }
 
@@ -224,10 +233,11 @@ namespace sisConcurso.Vista
             }
             else
             {
-                MessageBox.Show("Curp No Valida Debe de tener el formato : GVCD960808HSRLLS06, " +
-                    "Favor Sellecione Un Curp Valido", "Validacion De Curp", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                MessageBox.Show("Curp No Valida,Debe de tener el formato : VAAF900124HSRLNR08, " +
+                    "Ingrese Curp Valida", "Validacion De Curp", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 txtCurp.SelectAll();
                 txtCurp.Focus();
+                txtCurp.Text = "VAAF900124HSRLNR08";
             }
         }
 

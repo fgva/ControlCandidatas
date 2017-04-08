@@ -27,6 +27,7 @@ namespace sisConcurso.Manager
                 {
                     uHelper.usuario = user;
                     uHelper.esValido = true;
+                    Main.FKSESSION = user.pkUsuario;
                   
                 }
                 else
@@ -94,7 +95,7 @@ namespace sisConcurso.Manager
             {
                 using (var ctx = new DataModel())
                 {
-                    return ctx.usuarios.Where(r => r.sEmail.Contains(valorBuscar) && r.bStatus == sStatus).ToList();
+                    return ctx.usuarios.Where(r => r.sEmail.Contains(valorBuscar) &&  r.fkRol == 1 && r.bStatus == sStatus).ToList();
                 }
             }
             catch (Exception)

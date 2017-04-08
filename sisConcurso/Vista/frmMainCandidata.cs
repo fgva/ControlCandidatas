@@ -25,6 +25,7 @@ namespace sisConcurso.Vista
             {
                 nLista.Add(item);
             }
+            grdDatos.Columns["cAnoComvoca"].DefaultCellStyle.Format = "yyyy";
             this.grdDatos.DataSource = nLista;
         }
         public frmMainCandidata()
@@ -42,7 +43,7 @@ namespace sisConcurso.Vista
                 {
                     Button btn = (Button)obj;
                     permisos = Convert.ToInt32(btn.Tag);
-                    btn.Enabled = Form1.uHelper.TienePermiso(permisos);
+                    btn.Enabled = Main.uHelper.TienePermiso(permisos);
                 }
             }
         }
@@ -68,6 +69,7 @@ namespace sisConcurso.Vista
         {
             frmRegistroCandidata nue = new frmRegistroCandidata();
             nue.ShowDialog();
+            this.CargarCandidata();
         }
 
         //private void grdDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)

@@ -59,7 +59,7 @@ namespace sisConcurso.Vista
             municipio nMunicipio = new municipio();
             if (txtNombre.Text == "" || txtDescripcion.Text == "" || picCamara.Image == null)
             {
-                MessageBox.Show("Error Faltan datos", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error, Complete los campos Faltantes", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtNombre.Focus();
             }
             else
@@ -82,6 +82,7 @@ namespace sisConcurso.Vista
                     nMunicipio.mLogotipo = ImagenString;
 
                     MunicipioManage.Guarda(nMunicipio);
+      
 
                 }
                 this.Close();

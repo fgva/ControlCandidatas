@@ -30,7 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.picCamara = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -46,43 +45,33 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 100);
+            this.label1.Location = new System.Drawing.Point(18, 120);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(135, 20);
+            this.label1.Size = new System.Drawing.Size(75, 20);
             this.label1.TabIndex = 0;
-            this.label1.Text = "Nombre Municipio";
+            this.label1.Text = "Municipio";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.fondo;
-            this.pictureBox2.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.MUO_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(396, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(117, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 22;
             this.pictureBox2.TabStop = false;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(123, 27);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(405, 29);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "-----------------CARES-----------------";
-            // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(153, 97);
+            this.txtNombre.Location = new System.Drawing.Point(107, 114);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(360, 26);
+            this.txtNombre.Size = new System.Drawing.Size(406, 26);
             this.txtNombre.TabIndex = 24;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // picCamara
             // 
-            this.picCamara.Location = new System.Drawing.Point(12, 133);
+            this.picCamara.Location = new System.Drawing.Point(363, 181);
             this.picCamara.Name = "picCamara";
             this.picCamara.Size = new System.Drawing.Size(150, 178);
             this.picCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,15 +81,15 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(18, 314);
+            this.label8.Location = new System.Drawing.Point(359, 363);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 20);
+            this.label8.Size = new System.Drawing.Size(148, 20);
             this.label8.TabIndex = 30;
-            this.label8.Text = "Seleccione Camra";
+            this.label8.Text = "Seleccionar Archivo";
             // 
             // btnTomar
             // 
-            this.btnTomar.Location = new System.Drawing.Point(22, 337);
+            this.btnTomar.Location = new System.Drawing.Point(374, 386);
             this.btnTomar.Name = "btnTomar";
             this.btnTomar.Size = new System.Drawing.Size(117, 30);
             this.btnTomar.TabIndex = 28;
@@ -110,7 +99,7 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(172, 156);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 181);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(341, 121);
@@ -119,7 +108,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(168, 133);
+            this.label7.Location = new System.Drawing.Point(12, 158);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 20);
             this.label7.TabIndex = 26;
@@ -158,7 +147,6 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.picCamara);
             this.Controls.Add(this.txtNombre);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -177,7 +165,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.PictureBox picCamara;
         private System.Windows.Forms.Label label8;

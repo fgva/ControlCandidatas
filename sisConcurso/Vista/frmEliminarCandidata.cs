@@ -36,6 +36,8 @@ namespace sisConcurso.Vista
             idlugar = Convert.ToInt32(nCandidata.fkMunicipio);
             rakin = nCandidata.cRaking.ToString();
             idusuario = Convert.ToInt32(nCandidata.fkUsuario);
+            dtpAño.Format = DateTimePickerFormat.Custom;
+            dtpAño.CustomFormat = "yyyy";
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)

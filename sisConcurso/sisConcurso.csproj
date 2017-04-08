@@ -78,17 +78,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="About.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogincs.cs">
+    <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogincs.Designer.cs">
-      <DependentUpon>frmLogincs.cs</DependentUpon>
+    <Compile Include="Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="Manager\CandidataManage.cs" />
     <Compile Include="Manager\Helpers\UsuarioHelper.cs" />
@@ -142,6 +148,18 @@
     <Compile Include="Reporte\frmCandidataxConvocatoria.Designer.cs">
       <DependentUpon>frmCandidataxConvocatoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reporte\frmXmun.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reporte\frmXmun.Designer.cs">
+      <DependentUpon>frmXmun.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\Municipio.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Municipio.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reporte\reportecandidataconmaspuntuacion.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,12 +196,6 @@
     <Compile Include="Vista\frmMainMunicipio.Designer.cs">
       <DependentUpon>frmMainMunicipio.cs</DependentUpon>
     </Compile>
-    <Compile Include="Vista\frmMainReportes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vista\frmMainReportes.Designer.cs">
-      <DependentUpon>frmMainReportes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Vista\frmMainUsuario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -202,11 +214,14 @@
     <Compile Include="Vista\frmRegistroMunicipio.Designer.cs">
       <DependentUpon>frmRegistroMunicipio.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogincs.resx">
-      <DependentUpon>frmLogincs.cs</DependentUpon>
+    <EmbeddedResource Include="Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -242,6 +257,13 @@
     <EmbeddedResource Include="Reporte\frmCandidataxConvocatoria.resx">
       <DependentUpon>frmCandidataxConvocatoria.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\frmXmun.resx">
+      <DependentUpon>frmXmun.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reporte\Municipio.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>Municipio.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reporte\reportecandidataconmaspuntuacion.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>reportecandidataconmaspuntuacion.cs</LastGenOutput>
@@ -260,9 +282,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMainMunicipio.resx">
       <DependentUpon>frmMainMunicipio.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vista\frmMainReportes.resx">
-      <DependentUpon>frmMainReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\frmMainUsuario.resx">
       <DependentUpon>frmMainUsuario.cs</DependentUpon>
@@ -290,9 +309,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\fondo.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\HerramientasDatas\HerramientasDatas.csproj">
       <Project>{87d1af5d-5abd-48c8-aebd-5bee909731e9}</Project>
       <Name>HerramientasDatas</Name>
@@ -302,7 +318,10 @@
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\image_20170130_125259.png" />
+    <Content Include="Resources\image_20170130_125259.png" />
+    <Content Include="Resources\fondo.jpg" />
+    <Content Include="Resources\MUO-Logo.jpg" />
+    <None Include="Resources\MUO-Logo1.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

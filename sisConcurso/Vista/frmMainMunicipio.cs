@@ -25,7 +25,6 @@ namespace sisConcurso.Vista
                 nLista.Add(item);
             }
             this.grDatos.DataSource = nLista;
-            lblCantidad.Text = "Registros: " + grDatos.Rows.Count.ToString();
         }
         public frmMainMunicipio()
         {
@@ -42,7 +41,7 @@ namespace sisConcurso.Vista
                 {
                     Button btn = (Button)obj;
                     permisos = Convert.ToInt32(btn.Tag);
-                    btn.Enabled = Form1.uHelper.TienePermiso(permisos);
+                    btn.Enabled = Main.uHelper.TienePermiso(permisos);
                 }
             }
         }
@@ -96,7 +95,7 @@ namespace sisConcurso.Vista
                     CargarMunicipio();
                    
                 }
-
+                else
                 {
                     MessageBox.Show("Error no a seleccionado ningun municipio", "Error", MessageBoxButtons.OK,
                         MessageBoxIcon.Error);

@@ -21,6 +21,10 @@ namespace HerramientasDatas.Modelo
 
         [Required]
         [StringLength(45)]
+        public string cNombreCom { get; set; }
+
+        [Required]
+        [StringLength(45)]
         public string sEmail { get; set; }
 
         [Required]

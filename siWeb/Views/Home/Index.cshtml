@@ -10,21 +10,21 @@
 
 <div class="container">
     <div class="panel panel-default">
-        <div class="panel-heading">Concurso</div>
+        <div class="panel-heading">Concurso de Candidatas</div>
         <div class="panel-body">
             <div class="row">
                 <div class="col-xs-12">
                     @using (Html.BeginForm("Index", "Home", FormMethod.Get))
                     {
                         <div class="input-field col-xs-4">
-                            <label for="name">Candidata</label>
+                            <label for="name">Busqueda</label>
                             <input id="name" type="text" name="word" placeholder="Buscar" value="@word" />
                             
                         </div>
                         <div class="col-xs-4">
                             <label for="municipios">Municipios</label>
                             <select id="municipios" name="m">
-                                <option value="" disabled selected>Elija un municipio</option>
+                                <option value="" disabled selected>Seleccione un Municipio</option>
                                 @foreach (HerramientasDatas.Modelo.municipio item in DatosM)
                                 {
                                     <option value="@item.mNombre">@item.mNombre</option>
@@ -77,5 +77,5 @@
 
 
 
-    <h2>Sistema Candidatas </h2>
+    <h2>Sistema de Control de Candidatas 2017</h2>
 

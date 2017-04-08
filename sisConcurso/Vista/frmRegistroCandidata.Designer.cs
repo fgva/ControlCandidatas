@@ -49,7 +49,6 @@
             this.cmbDispositivo = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.dtpFDN = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.picFoto)).BeginInit();
@@ -78,7 +77,7 @@
             // 
             // dtpAño
             // 
-            this.dtpAño.Location = new System.Drawing.Point(537, 81);
+            this.dtpAño.Location = new System.Drawing.Point(175, 384);
             this.dtpAño.Name = "dtpAño";
             this.dtpAño.Size = new System.Drawing.Size(188, 26);
             this.dtpAño.TabIndex = 1;
@@ -86,11 +85,11 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(493, 84);
+            this.label1.Location = new System.Drawing.Point(12, 387);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(157, 20);
             this.label1.TabIndex = 20;
-            this.label1.Text = "Año";
+            this.label1.Text = "Año de Convocatoria";
             // 
             // label2
             // 
@@ -105,7 +104,7 @@
             // 
             this.txtNombre.Location = new System.Drawing.Point(155, 81);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(332, 26);
+            this.txtNombre.Size = new System.Drawing.Size(447, 26);
             this.txtNombre.TabIndex = 0;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -156,7 +155,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(333, 182);
+            this.label5.Location = new System.Drawing.Point(333, 185);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(63, 20);
             this.label5.TabIndex = 18;
@@ -181,16 +180,16 @@
             // 
             // txtDescripcion
             // 
-            this.txtDescripcion.Location = new System.Drawing.Point(194, 234);
+            this.txtDescripcion.Location = new System.Drawing.Point(12, 234);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
-            this.txtDescripcion.Size = new System.Drawing.Size(531, 121);
+            this.txtDescripcion.Size = new System.Drawing.Size(531, 144);
             this.txtDescripcion.TabIndex = 7;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(203, 211);
+            this.label7.Location = new System.Drawing.Point(12, 208);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 20);
             this.label7.TabIndex = 19;
@@ -198,7 +197,7 @@
             // 
             // picFoto
             // 
-            this.picFoto.Location = new System.Drawing.Point(12, 211);
+            this.picFoto.Location = new System.Drawing.Point(549, 220);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(176, 158);
             this.picFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -207,7 +206,7 @@
             // 
             // btnTomar
             // 
-            this.btnTomar.Location = new System.Drawing.Point(32, 429);
+            this.btnTomar.Location = new System.Drawing.Point(569, 438);
             this.btnTomar.Name = "btnTomar";
             this.btnTomar.Size = new System.Drawing.Size(117, 30);
             this.btnTomar.TabIndex = 8;
@@ -218,7 +217,7 @@
             // cmbDispositivo
             // 
             this.cmbDispositivo.FormattingEnabled = true;
-            this.cmbDispositivo.Location = new System.Drawing.Point(12, 395);
+            this.cmbDispositivo.Location = new System.Drawing.Point(549, 404);
             this.cmbDispositivo.Name = "cmbDispositivo";
             this.cmbDispositivo.Size = new System.Drawing.Size(176, 28);
             this.cmbDispositivo.TabIndex = 11;
@@ -226,31 +225,21 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 372);
+            this.label8.Location = new System.Drawing.Point(604, 381);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(138, 20);
+            this.label8.Size = new System.Drawing.Size(73, 20);
             this.label8.TabIndex = 12;
-            this.label8.Text = "Seleccione Camra";
+            this.label8.Text = "Camaras";
             // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.fondo;
-            this.pictureBox2.Location = new System.Drawing.Point(-1, -6);
+            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.MUO_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(608, 12);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(117, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 20;
             this.pictureBox2.TabStop = false;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(122, 24);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(603, 29);
-            this.label9.TabIndex = 21;
-            this.label9.Text = "----------------------------CARES----------------------------";
             // 
             // label10
             // 
@@ -275,7 +264,6 @@
             this.ClientSize = new System.Drawing.Size(737, 537);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpFDN);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.cmbDispositivo);
@@ -332,7 +320,6 @@
         private System.Windows.Forms.ComboBox cmbDispositivo;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpFDN;
     }

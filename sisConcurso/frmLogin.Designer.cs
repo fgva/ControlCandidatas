@@ -1,6 +1,6 @@
 ﻿namespace sisConcurso
 {
-    partial class frmLogincs
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -40,7 +40,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(10, 227);
+            this.btnCancelar.Location = new System.Drawing.Point(12, 223);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(83, 33);
             this.btnCancelar.TabIndex = 12;
@@ -54,14 +54,14 @@
             this.btnIngresar.Name = "btnIngresar";
             this.btnIngresar.Size = new System.Drawing.Size(89, 33);
             this.btnIngresar.TabIndex = 11;
-            this.btnIngresar.Text = "Ingresar";
+            this.btnIngresar.Text = "Aceptar";
             this.btnIngresar.UseVisualStyleBackColor = true;
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 188);
+            this.label2.Location = new System.Drawing.Point(1, 150);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 10;
@@ -69,10 +69,10 @@
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(107, 185);
+            this.txtPassword.Location = new System.Drawing.Point(103, 150);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(186, 26);
+            this.txtPassword.Size = new System.Drawing.Size(201, 26);
             this.txtPassword.TabIndex = 9;
             this.txtPassword.Text = "123";
             this.txtPassword.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPassword_KeyPress);
@@ -80,7 +80,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(8, 158);
+            this.label1.Location = new System.Drawing.Point(29, 121);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 8;
@@ -88,23 +88,23 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Location = new System.Drawing.Point(92, 155);
+            this.txtUsuario.Location = new System.Drawing.Point(103, 118);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(201, 26);
             this.txtUsuario.TabIndex = 7;
-            this.txtUsuario.Text = "cris";
+            this.txtUsuario.Text = "capturista@gmail.com";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::sisConcurso.Properties.Resources.image_20170130_125259;
-            this.pictureBox1.Location = new System.Drawing.Point(-1, -1);
+            this.pictureBox1.Image = global::sisConcurso.Properties.Resources.MUO_Logo;
+            this.pictureBox1.Location = new System.Drawing.Point(28, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(323, 150);
+            this.pictureBox1.Size = new System.Drawing.Size(262, 100);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 13;
             this.pictureBox1.TabStop = false;
             // 
-            // frmLogincs
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,8 +118,8 @@
             this.Controls.Add(this.txtUsuario);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmLogincs";
-            this.Text = "Inicio Sesion";
+            this.Name = "frmLogin";
+            this.Text = "Acceder al Sistema";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

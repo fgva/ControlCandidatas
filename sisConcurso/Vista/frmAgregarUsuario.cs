@@ -29,9 +29,6 @@ namespace sisConcurso.Vista
             VALIDAR = true;
             InitializeComponent();
 
-            cmbRol.Items.Insert(0, "Seleccione Opcion");
-            cmbRol.Items.Insert(1, "Capturista");
-            cmbRol.SelectedIndex = 0;
         }
 
         public frmAgregarUsuario(frmMainUsuario musuario)
@@ -40,16 +37,12 @@ namespace sisConcurso.Vista
             mUsuario = musuario; //modificar
             VALIDAR = false;
             VALIDARUsuario = true;
-
-            cmbRol.Items.Insert(0, "Seleccione Opcion");
-            cmbRol.Items.Insert(1, "Capturista");
             usuario nUsuario = UsuarioManeger.BuscarPorID(frmMainUsuario.idConw);
             pk = nUsuario.pkUsuario;
             txtCuenta.Text = nUsuario.sEmail;
-            label2.Visible = false;
-            txtContra.Visible = false;
-            txtContra.Text = nUsuario.sPassword;
-            cmbRol.SelectedIndex = 1;
+            textBox2.Text = nUsuario.cNombreCom;
+
+
             idRol = Convert.ToInt32(nUsuario.fkRol);
             mUsuario.CargarUsuarios();
         }
@@ -57,40 +50,42 @@ namespace sisConcurso.Vista
         private void button1_Click(object sender, EventArgs e)
         {
             usuario nUsuario = new usuario();
-            if (txtContra.Text == "" || txtCuenta.Text == "" || cmbRol.SelectedIndex == null)
+            if (txtContra.Text == "" || txtCuenta.Text == "" || txtContra2.Text == "" || textBox2.Text == "")
             {
-                MessageBox.Show("Error faltan datos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Llene todo los Campos", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 txtContra.Focus();
             }
             else
             {
-                if (cmbRol.SelectedIndex > 0)
+                if (txtContra.Text == txtContra2.Text)
                 {
                     if (pk > 0)
                     {
                         nUsuario.pkUsuario = pk;
+                        nUsuario.cNombreCom = textBox2.Text;
                         nUsuario.sEmail = txtCuenta.Text;
-                        nUsuario.sPassword = txtContra.Text;
-                        nUsuario.fkRol = idRol;
+                        nUsuario.sPassword = LoginTool.GetMD5(txtContra.Text);
+                        nUsuario.fkRol = 1;
                         UsuarioManeger.GuardaUsuario(nUsuario);
                         mUsuario.CargarUsuarios();
                     }
                     else
                     {
+                        nUsuario.cNombreCom = textBox2.Text;
                         nUsuario.sEmail = txtCuenta.Text;
                         nUsuario.sPassword = LoginTool.GetMD5(txtContra.Text);
-                        nUsuario.fkRol = Convert.ToInt32(cmbRol.SelectedIndex);
+                        nUsuario.fkRol = 1;
                         UsuarioManeger.GuardaUsuario(nUsuario);
                     }
                     this.Close();
                 }
-
                 else
                 {
-                    MessageBox.Show("Favor de Seleccionar un Rol", "Advertencia", MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning);
+                    label5.Text = "Contrasena no coinciden";
+                    txtContra.Focus();
                 }
             }
+
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -105,8 +100,23 @@ namespace sisConcurso.Vista
 
         private void txtContra_KeyPress(object sender, KeyPressEventArgs e)
         {
-            ValidacionesTXT va = new ValidacionesTXT();
-            va.SoloNumeros(e);
+
+        }
+
+        private void txtCuenta_Leave(object sender, EventArgs e)
+        {
+            if (ValidacionesTXT.ValidarEmail(txtCuenta.Text))
+            {
+
+            }
+            else
+            {
+                MessageBox.Show("formato de correo no valido : ejemplo@ejemplo.com, " +
+                    "Escriba Un Correo Valido", "Validacion De Correo", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                txtCuenta.SelectAll();
+                txtCuenta.Focus();
+                txtCuenta.Text = "ejemplo@ejemplo.com";
+            }
         }
     }
 }

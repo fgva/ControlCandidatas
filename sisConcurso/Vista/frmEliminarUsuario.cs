@@ -24,11 +24,11 @@ namespace sisConcurso.Vista
             mUsuario = musuario;
             usuario nUsuario = UsuarioManeger.BuscarPorID(frmMainUsuario.idConw);
             pk = nUsuario.pkUsuario;
+            textBox1.Text = nUsuario.cNombreCom;
             txtCuenta.Text = nUsuario.sEmail;
-            contra = nUsuario.sPassword;
-            cmbRol.Items.Insert(0, "Seleccione Opcion");
-            cmbRol.Items.Insert(1, "Capturista");
-            cmbRol.SelectedIndex = 1;
+            txtcontra.Text = nUsuario.sPassword;
+            txtcontra.Visible = false;
+            label3.Visible = false;
             idRol = Convert.ToInt32(nUsuario.fkRol);
            
         }
@@ -37,12 +37,14 @@ namespace sisConcurso.Vista
         {
             usuario nUsuario = new usuario();
             nUsuario.pkUsuario = pk;
+            nUsuario.cNombreCom = textBox1.Text;
             nUsuario.sEmail = txtCuenta.Text;
-            nUsuario.sPassword = contra;
-            nUsuario.fkRol = idRol;
+            nUsuario.sPassword = txtcontra.Text;
+            nUsuario.fkRol = 1;
             nUsuario.bStatus = false;
-            UsuarioManeger.bajaUsuario(nUsuario);
+            UsuarioManeger.GuardaUsuario(nUsuario);
             mUsuario.CargarUsuarios();
+            this.Close();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)

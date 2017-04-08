@@ -30,7 +30,6 @@
         {
             this.label10 = new System.Windows.Forms.Label();
             this.dtpFDN = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.picFoto = new System.Windows.Forms.PictureBox();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
@@ -68,20 +67,10 @@
             this.dtpFDN.Size = new System.Drawing.Size(323, 26);
             this.dtpFDN.TabIndex = 46;
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(128, 33);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(603, 29);
-            this.label9.TabIndex = 45;
-            this.label9.Text = "----------------------------CARES----------------------------";
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.fondo;
-            this.pictureBox2.Location = new System.Drawing.Point(5, 3);
+            this.pictureBox2.Image = global::sisConcurso.Properties.Resources.MUO_Logo;
+            this.pictureBox2.Location = new System.Drawing.Point(608, -3);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(117, 87);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -90,7 +79,7 @@
             // 
             // picFoto
             // 
-            this.picFoto.Location = new System.Drawing.Point(18, 220);
+            this.picFoto.Location = new System.Drawing.Point(555, 191);
             this.picFoto.Name = "picFoto";
             this.picFoto.Size = new System.Drawing.Size(176, 158);
             this.picFoto.TabIndex = 40;
@@ -99,7 +88,7 @@
             // txtDescripcion
             // 
             this.txtDescripcion.Enabled = false;
-            this.txtDescripcion.Location = new System.Drawing.Point(200, 243);
+            this.txtDescripcion.Location = new System.Drawing.Point(18, 240);
             this.txtDescripcion.Multiline = true;
             this.txtDescripcion.Name = "txtDescripcion";
             this.txtDescripcion.Size = new System.Drawing.Size(531, 121);
@@ -108,7 +97,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(209, 220);
+            this.label7.Location = new System.Drawing.Point(18, 217);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 20);
             this.label7.TabIndex = 38;
@@ -161,7 +150,7 @@
             this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(161, 90);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(332, 26);
+            this.txtNombre.Size = new System.Drawing.Size(564, 26);
             this.txtNombre.TabIndex = 30;
             // 
             // label2
@@ -176,16 +165,16 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(499, 93);
+            this.label1.Location = new System.Drawing.Point(14, 372);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 20);
+            this.label1.Size = new System.Drawing.Size(102, 20);
             this.label1.TabIndex = 28;
-            this.label1.Text = "Año";
+            this.label1.Text = "Convocatoria";
             // 
             // dtpAño
             // 
             this.dtpAño.Enabled = false;
-            this.dtpAño.Location = new System.Drawing.Point(543, 90);
+            this.dtpAño.Location = new System.Drawing.Point(122, 366);
             this.dtpAño.Name = "dtpAño";
             this.dtpAño.Size = new System.Drawing.Size(188, 26);
             this.dtpAño.TabIndex = 27;
@@ -227,7 +216,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.dtpFDN);
-            this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.picFoto);
             this.Controls.Add(this.txtDescripcion);
@@ -258,7 +246,6 @@
 
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.DateTimePicker dtpFDN;
-        private System.Windows.Forms.Label label9;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox picFoto;
         private System.Windows.Forms.TextBox txtDescripcion;
